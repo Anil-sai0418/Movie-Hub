@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// 1. Import useNavigate hook
+
 import { useNavigate } from 'react-router-dom';
 
 
@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 function Nav({ search = "", onSearch = () => {} }) {
   const [localSearch, setLocalSearch] = useState(search);
   
-  // 2. Initialize the navigate function
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,7 +17,7 @@ function Nav({ search = "", onSearch = () => {} }) {
 
 
   return (
-    <div className='w-full h-[70px] bg-white border-b border-gray-200 shadow-sm flex items-center px-4 md:px-8 justify-between sticky top-0 z-50'>
+    <div className='w-full h-[70px] bg-black border-b  shadow-sm flex items-center px-4 md:px-8 justify-between sticky top-0 z-50'>
       
       {/* 1. LEFT SIDE - LOGO */}
       <div 
@@ -28,8 +28,8 @@ function Nav({ search = "", onSearch = () => {} }) {
         <div className='h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-blue-200 shadow-lg'>
           M
         </div>
-        <span className='hidden md:inline text-xl font-bold tracking-tight text-gray-800'>
-          Movie<span className='text-blue-600'>Hub</span>
+        <span className='hidden md:inline text-xl font-bold tracking-tight text-white'>
+          Movie<span className='text-blue-600'> Hub</span>
         </span>
       </div>
 
@@ -94,19 +94,7 @@ function Nav({ search = "", onSearch = () => {} }) {
       {/* 3. RIGHT SIDE - CART BUTTON */}
       <div className='w-auto md:w-1/3 flex justify-end items-center gap-3'>
         
-        <button 
-          onClick={() => navigate('/cartitems')}
-          className='flex items-center gap-2 bg-gray-800 text-white px-4 md:px-5 py-2.5 rounded-full 
-                     text-sm font-semibold shadow-md hover:bg-gray-900 active:scale-95 
-                     transition-all duration-300'
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
-               strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-            <path strokeLinecap="round" strokeLinejoin="round" 
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 8h14l-2-8M10 21a1 1 0 100-2 1 1 0 000 2zm7 0a1 1 0 100-2 1 1 0 000 2z"/>
-          </svg>
-          <span className='hidden md:block'>Cart </span>
-        </button>
+     
       </div>
       
 

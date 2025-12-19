@@ -1,4 +1,7 @@
-import { Link } from "react-router-dom";
+
+console.log(data)
+import { data, Link } from "react-router-dom";
+
 
 const MovieCard = ({ movie }) => {
   return (

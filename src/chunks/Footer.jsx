@@ -2,37 +2,53 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="w-full bg-white text-black py-8 mt-10">
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-        
+    <footer className="w-full bg-gradient-to-t from-black via-gray-900 to-black text-gray-300 pt-16 pb-10 border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+
+        {/* Brand */}
         <div>
-          <h2 className="text-xl font-semibold mb-3">ShopFlow</h2>
-          <p className="text-sm opacity-80">
-            Your one‑stop solution for premium shopping experience.
+          <h2 className="text-2xl font-bold text-white mb-4">MovieHub</h2>
+          <p className="text-sm leading-relaxed text-gray-400">
+            A premium movie discovery platform built for cinematic lovers.
+            Explore trending, top‑rated, and latest movies with a modern experience.
           </p>
         </div>
 
+        {/* Navigation */}
         <div>
-          <h3 className="text-lg font-medium mb-3">Quick Links</h3>
-          <ul className="space-y-2 text-sm opacity-80">
-            <li><a href="/" className="hover:opacity-100 transition">Home</a></li>
-            <li><a href="/products" className="hover:opacity-100 transition">Products</a></li>
-            <li><a href="/cart" className="hover:opacity-100 transition">Cart</a></li>
+          <h3 className="text-lg font-semibold text-white mb-4">Explore</h3>
+          <ul className="space-y-3 text-sm">
+            <li>
+              <a href="/" className="hover:text-white transition">
+                Home
+              </a>
+            </li>
+         
+           
           </ul>
         </div>
 
+      
+
+        {/* Contact */}
         <div>
-          <h3 className="text-lg font-medium mb-3">Contact</h3>
-          <p className="text-sm opacity-80">Email: support@shopflow.com</p>
-          <p className="text-sm opacity-80">Phone: +91 98765 43210</p>
+          <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
+          <p className="text-sm text-gray-400">support@moviehub.com</p>
+          <p className="text-sm text-gray-400 mt-1">+91 70759 23575</p>
+        
+
+        
         </div>
       </div>
 
-      <p className="text-center text-sm opacity-70 mt-6">
-        © {new Date().getFullYear()} ShopFlow. All rights reserved.
-      </p>
+      {/* Divider */}
+      <div className="max-w-7xl mx-auto px-6 mt-12">
+        <div className="border-t border-white/10 pt-6 text-center text-sm text-gray-500">
+          © {new Date().getFullYear()} MovieHub. All rights reserved.
+        </div>
+      </div>
     </footer>
-  )
+  );
 }
 
 export default Footer

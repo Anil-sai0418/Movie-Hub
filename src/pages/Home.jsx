@@ -19,9 +19,10 @@ const Home = () => {
 
   if (error)
     return (
-      <p className="text-center mt-20 text-red-400 text-lg">
-        Error fetching movies. Please try refreshing.
-      </p>
+      <div className="text-center mt-20 text-red-400 text-lg">
+        <p>Error fetching movies. Please try refreshing.</p>
+        <pre className="text-xs text-red-300 mt-2">{error.message || JSON.stringify(error)}</pre>
+      </div>
     );
 
   return (
